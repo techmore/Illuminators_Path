@@ -43,6 +43,11 @@ export type VideoPlaylist = {
   videos: string[];
 };
 
+export type BridgeReference = {
+  title: string;
+  note: string;
+};
+
 export const stages: Stage[] = [
   {
     id: "intellectual-awakening",
@@ -469,6 +474,88 @@ export const resources: Resource[] = [
     themes: ["deep-listening", "conversation"],
     primaryLink: "#",
     secondaryLink: "#"
+  },
+  {
+    id: "stoic-guide-emotional-intelligence",
+    type: "book",
+    title: "The Stoic's Guide to Emotional Intelligence (or similar modern Stoic EI books)",
+    creator: "Addendum reference",
+    blurb: "Applies Seneca/Epictetus/Marcus to listening and relationships without diluting the philosophy.",
+    stage: "Addendum",
+    themes: ["stoicism", "emotional-intelligence", "relationships"],
+    primaryLink: "#",
+    secondaryLink: "#"
+  },
+  {
+    id: "stoicism-and-relationships",
+    type: "book",
+    title: "Stoicism and Relationships",
+    creator: "Practical guides",
+    blurb: "Focuses on building strong bonds while keeping inner freedom.",
+    stage: "Addendum",
+    themes: ["stoicism", "relationships", "inner-freedom"],
+    primaryLink: "#",
+    secondaryLink: "#"
+  },
+  {
+    id: "you-just-dont-understand",
+    type: "book",
+    title: "You Just Don't Understand: Women and Men in Conversation",
+    creator: "Deborah Tannen",
+    blurb: "Explains rapport-talk versus report-talk and why venting often builds emotional connection.",
+    stage: "Addendum",
+    themes: ["rapport-talk", "gender-dynamics", "listening"],
+    primaryLink: "#",
+    secondaryLink: "#"
+  },
+  {
+    id: "men-are-from-mars",
+    type: "book",
+    title: "Men Are from Mars, Women Are from Venus",
+    creator: "John Gray",
+    blurb: "Directly addresses the venting dynamic: empathy first, solutions later.",
+    stage: "Addendum",
+    themes: ["gender-dynamics", "empathy", "relationships"],
+    primaryLink: "#",
+    secondaryLink: "#"
+  },
+  {
+    id: "just-listen",
+    type: "book",
+    title: "Just Listen",
+    creator: "Mark Goulston",
+    blurb: "Practical techniques to get through to anyone by making them feel truly heard first.",
+    stage: "Addendum",
+    themes: ["high-agency", "listening", "strategy"],
+    primaryLink: "#",
+    secondaryLink: "#"
+  }
+];
+
+export const bridgeReferences: BridgeReference[] = [
+  {
+    title: "The Lost Art of Listening by Michael P. Nichols",
+    note: "Excellent for understanding why people need to be heard beyond venting and how poor listening damages relationships."
+  },
+  {
+    title: "Just Listen by Mark Goulston",
+    note: "Great for high-intellect readers who want tools that feel strategic rather than fluffy."
+  },
+  {
+    title: "Nonviolent Communication by Marshall Rosenberg",
+    note: "Helps reframe conversations around empathy and needs, including judgmental versus empathic language."
+  },
+  {
+    title: "You're Not Listening by Kate Murphy",
+    note: "Explores the cultural loss of listening and why presence matters more than clever responses."
+  },
+  {
+    title: "You Just Don't Understand by Deborah Tannen",
+    note: "Useful for rapport-talk versus report-talk and the gender/venting dynamic."
+  },
+  {
+    title: "Men Are from Mars, Women Are from Venus by John Gray",
+    note: "A direct, accessible reference for empathy-first responses when someone vents."
   }
 ];
 
@@ -606,6 +693,54 @@ export const videoResources: VideoResource[] = [
     blurb: "A practical talk on mindfulness as a foundation for living in the present moment.",
     url: "https://www.youtube.com/watch?v=Ijnt-eXukwk",
     embedUrl: "https://www.youtube.com/embed/Ijnt-eXukwk"
+  },
+  {
+    id: "sinek-art-of-listening",
+    title: "The Art of Listening",
+    speaker: "Simon Sinek",
+    source: "YouTube talk reference",
+    stage: "Addendum",
+    theme: "High-Agency Listening",
+    duration: "Short talk",
+    blurb: "Short and clear on creating an environment where people feel heard, not just processing words.",
+    url: "https://www.youtube.com/results?search_query=Simon+Sinek+The+Art+of+Listening",
+    embedUrl: "https://www.youtube.com/embed/videoseries?list=PLplaceholder"
+  },
+  {
+    id: "great-listener-ted",
+    title: "How to Be a Great Listener",
+    speaker: "Maegan Stephens & Nicole Lowenbraun",
+    source: "TED Talk",
+    stage: "Addendum",
+    theme: "Listening Styles",
+    duration: "Talk",
+    blurb: "A framework for different listening styles and practical shifts.",
+    url: "https://www.youtube.com/results?search_query=TED+How+to+Be+a+Great+Listener+Maegan+Stephens+Nicole+Lowenbraun",
+    embedUrl: "https://www.youtube.com/embed/videoseries?list=PLplaceholder"
+  },
+  {
+    id: "ury-power-of-listening",
+    title: "The Power of Listening",
+    speaker: "William Ury",
+    source: "TEDx",
+    stage: "Addendum",
+    theme: "De-escalation",
+    duration: "Talk",
+    blurb: "A negotiation expert showing how listening de-escalates conflict and builds trust.",
+    url: "https://www.youtube.com/results?search_query=William+Ury+The+Power+of+Listening+TEDx",
+    embedUrl: "https://www.youtube.com/embed/videoseries?list=PLplaceholder"
+  },
+  {
+    id: "brene-empathy-sympathy",
+    title: "Empathy vs. Sympathy",
+    speaker: "Brene Brown",
+    source: "YouTube talk reference",
+    stage: "Addendum",
+    theme: "Empathy",
+    duration: "Short clip",
+    blurb: "A clear explanation of why people share pain and what they actually need in response.",
+    url: "https://www.youtube.com/results?search_query=Brene+Brown+empathy+vs+sympathy",
+    embedUrl: "https://www.youtube.com/embed/videoseries?list=PLplaceholder"
   }
 ];
 
@@ -640,6 +775,18 @@ export const videoPlaylists: VideoPlaylist[] = [
     videos: [
       "Deep Listening - Thich Nhat Hanh",
       "The Art of Listening"
+    ]
+  },
+  {
+    id: "strong-talks",
+    title: "Strong Talks for High-Agency Listeners",
+    description: "Short, practical talks for people who default to analysis, fixing, or control.",
+    stage: "Addendum",
+    videos: [
+      "The Art of Listening",
+      "How to Be a Great Listener",
+      "The Power of Listening",
+      "Empathy vs. Sympathy"
     ]
   }
 ];

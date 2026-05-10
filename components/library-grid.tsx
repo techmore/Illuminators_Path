@@ -2,13 +2,13 @@
 
 import { useMemo, useState } from "react";
 import { BookOpen, Headphones, Plus } from "lucide-react";
-import { resources } from "@/data/content";
+import { bridgeReferences, resources } from "@/data/content";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-const filters = ["All", "Stage 1-2", "Stage 3", "Stage 4-5", "Bonus", "Brooks-centric", "Presence & Mindfulness", "Listening, Empathy & Relational Growth"];
+const filters = ["All", "Stage 1-2", "Stage 3", "Stage 4-5", "Bonus", "Addendum", "Brooks-centric", "Presence & Mindfulness", "Listening, Empathy & Relational Growth"];
 
 export function LibraryGrid() {
   const [query, setQuery] = useState("");
@@ -26,6 +26,30 @@ export function LibraryGrid() {
 
   return (
     <div>
+      <section className="mb-6 grid gap-4 lg:grid-cols-[1fr_320px]">
+        <div className="now-panel">
+          <p className="text-xs font-bold uppercase tracking-[0.1em] text-[#aebf93]">Bridge references</p>
+          <h2 className="mt-2 font-serif text-3xl font-semibold">For high-agency listeners</h2>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-[#dce8c7]">
+            Addendum material for readers who respect stoic self-reliance and want relational tools that feel concrete, strategic, and emotionally literate.
+          </p>
+        </div>
+        <div className="dashboard-panel">
+          <p className="panel-label">Best starting point</p>
+          <p className="mt-2 font-serif text-2xl font-semibold">Empathy first, solutions later</p>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Use these references when the core path needs more help with venting, rapport-talk, or fix-it reflexes.
+          </p>
+        </div>
+      </section>
+      <section className="mb-6 grid gap-3 md:grid-cols-2 xl:grid-cols-3" aria-label="Bridge reference notes">
+        {bridgeReferences.map((reference) => (
+          <div key={reference.title} className="rounded-lg border bg-card/80 p-4">
+            <p className="font-medium">{reference.title}</p>
+            <p className="mt-2 text-sm leading-6 text-muted-foreground">{reference.note}</p>
+          </div>
+        ))}
+      </section>
       <div className="grid gap-4 rounded-lg border bg-card/80 p-5 md:grid-cols-[1fr_260px]">
         <div>
           <Label htmlFor="library-search">Search the library</Label>

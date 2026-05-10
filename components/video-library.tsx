@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-const filters = ["All", "Stage 2", "Stage 3", "Stage 4", "Stage 5"];
+const filters = ["All", "Stage 2", "Stage 3", "Stage 4", "Stage 5", "Addendum"];
 
 export function VideoLibrary() {
   const [query, setQuery] = useState("");
