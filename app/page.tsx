@@ -29,6 +29,11 @@ export default function HomePage() {
                   Explore Library <BookOpen className="h-4 w-4" aria-hidden="true" />
                 </Link>
               </Button>
+              <Button asChild size="lg" variant="outline">
+                <Link href="/videos">
+                  Watch Videos <Sparkles className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              </Button>
             </div>
           </div>
           <div className="dashboard-panel">
@@ -40,6 +45,19 @@ export default function HomePage() {
             <div className="panel-label">Path</div>
             <div className="panel-value mt-3">5<span className="ml-1 text-base font-normal text-muted-foreground">stages</span></div>
             <p className="mt-3 text-sm text-muted-foreground">Readings, practices, milestones, and capstone.</p>
+          </div>
+          <div className="dashboard-panel md:col-span-4">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <div className="panel-label">New video hub</div>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  YouTube-centered playlists for Brooks interviews, presence practices, and deep-listening teachings.
+                </p>
+              </div>
+              <Button asChild variant="secondary">
+                <Link href="/videos">Open Videos</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

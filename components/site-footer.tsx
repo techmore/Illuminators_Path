@@ -13,6 +13,7 @@ export function SiteFooter() {
           <div className="mt-5 flex flex-wrap gap-4 text-sm text-muted-foreground">
             <Link href="/path" className="hover:text-foreground">The Path</Link>
             <Link href="/library" className="hover:text-foreground">Library</Link>
+            <Link href="/videos" className="hover:text-foreground">Videos</Link>
             <Link href="/practices" className="hover:text-foreground">Practices</Link>
             <Link href="/community" className="hover:text-foreground">Community</Link>
           </div>

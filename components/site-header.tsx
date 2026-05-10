@@ -12,6 +12,7 @@ const navItems = [
   ["Home", "/"],
   ["The Path", "/path"],
   ["Library", "/library"],
+  ["Videos", "/videos"],
   ["Practices", "/practices"],
   ["Community", "/community"],
   ["Insights", "/insights"],

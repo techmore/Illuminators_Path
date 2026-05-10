@@ -15,6 +15,7 @@ app/
   page.tsx
   path/page.tsx
   practices/page.tsx
+  videos/page.tsx
 components/
   library-grid.tsx
   newsletter-form.tsx
@@ -25,6 +26,7 @@ components/
   site-header.tsx
   theme-provider.tsx
   theme-toggle.tsx
+  video-library.tsx
   ui/
 data/
   content.ts

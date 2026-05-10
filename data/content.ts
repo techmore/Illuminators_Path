@@ -22,6 +22,27 @@ export type Stage = {
   reflections: string[];
 };
 
+export type VideoResource = {
+  id: string;
+  title: string;
+  speaker: string;
+  source: string;
+  stage: string;
+  theme: string;
+  duration: string;
+  blurb: string;
+  url: string;
+  embedUrl: string;
+};
+
+export type VideoPlaylist = {
+  id: string;
+  title: string;
+  description: string;
+  stage: string;
+  videos: string[];
+};
+
 export const stages: Stage[] = [
   {
     id: "intellectual-awakening",
@@ -486,5 +507,139 @@ export const audioGuides = [
   {
     title: "Reflect Back Practice",
     src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+  }
+];
+
+export const videoResources: VideoResource[] = [
+  {
+    id: "how-to-know-a-person-trinity",
+    title: "How To Know a Person - David Brooks",
+    speaker: "David Brooks",
+    source: "The Trinity Forum",
+    stage: "Stage 5",
+    theme: "Illuminating Others",
+    duration: "Long-form conversation",
+    blurb: "A Brooks-centered on-ramp to seeing others deeply and being deeply seen.",
+    url: "https://www.youtube.com/watch?v=NNT0rpBB4Ek",
+    embedUrl: "https://www.youtube.com/embed/NNT0rpBB4Ek"
+  },
+  {
+    id: "pbs-how-to-know-person",
+    title: "David Brooks writes on the art of seeing others in new book",
+    speaker: "David Brooks",
+    source: "PBS NewsHour",
+    stage: "Stage 5",
+    theme: "Illuminating Others",
+    duration: "Interview",
+    blurb: "A concise introduction to How to Know a Person and the practice of human connection.",
+    url: "https://www.pbs.org/video/how-to-know-a-person-1698271715/",
+    embedUrl: "https://www.youtube.com/embed/videoseries?list=PLplaceholder"
+  },
+  {
+    id: "second-mountain-aspen",
+    title: "The Second Mountain: The Next Big Challenge in Your Life",
+    speaker: "David Brooks",
+    source: "Aspen Institute",
+    stage: "Stage 2",
+    theme: "Character & Commitment",
+    duration: "Lecture",
+    blurb: "A lecture on moving from first-mountain achievement toward moral commitment.",
+    url: "https://www.aspeninstitute.org/videos/second-mountain-next-big-challenge-life/",
+    embedUrl: "https://www.youtube.com/embed/videoseries?list=PLplaceholder"
+  },
+  {
+    id: "tara-brach-living-presence",
+    title: "Guided Meditation: Living Presence (with Body Scan)",
+    speaker: "Tara Brach",
+    source: "Tara Brach",
+    stage: "Stage 3",
+    theme: "Presence",
+    duration: "12 min",
+    blurb: "A short guided practice for coming back to the body and the present moment.",
+    url: "https://www.tarabrach.com/meditation-living-presence-body-scan-2/",
+    embedUrl: "https://www.youtube.com/embed/videoseries?list=PLplaceholder"
+  },
+  {
+    id: "mindful-presence-tara",
+    title: "Mindful Presence & Guided Practice: Being Here",
+    speaker: "Tara Brach",
+    source: "AudioBuddha / YouTube playlist reference",
+    stage: "Stage 3",
+    theme: "Presence",
+    duration: "17 min",
+    blurb: "A presence teaching paired with a guided practice for training attention.",
+    url: "https://audiobuddha.org/mindful-presence-by-tara-brach/",
+    embedUrl: "https://www.youtube.com/embed/videoseries?list=PLahooTbMXXrTCe-8RCpINiI8iU0CiCg8S"
+  },
+  {
+    id: "thich-nhat-hanh-deep-listening",
+    title: "Deep Listening - Thich Nhat Hanh",
+    speaker: "Thich Nhat Hanh",
+    source: "SuperSoul Sunday clip reference",
+    stage: "Stage 4",
+    theme: "Deep Listening",
+    duration: "Short clip",
+    blurb: "A focused teaching on compassionate listening as a way to relieve suffering.",
+    url: "https://mensfellowship.net/deep-listening1/",
+    embedUrl: "https://www.youtube.com/embed/videoseries?list=PLplaceholder"
+  },
+  {
+    id: "art-of-listening-thich",
+    title: "The Art of Listening",
+    speaker: "Thich Nhat Hanh",
+    source: "Thich Nhat Hanh's Talks",
+    stage: "Stage 4",
+    theme: "Deep Listening",
+    duration: "Full Dharma talk",
+    blurb: "A longer teaching on listening and speaking as mindful communication practice.",
+    url: "https://tnhtalks.org/2024/07/20/the-art-of-listening/",
+    embedUrl: "https://www.youtube.com/embed/0j-XckIQzdY"
+  },
+  {
+    id: "mindfulness-foundation-health",
+    title: "Mindfulness as a Foundation for Health",
+    speaker: "Thich Nhat Hanh",
+    source: "Talks at Google",
+    stage: "Stage 3",
+    theme: "Presence",
+    duration: "Talk",
+    blurb: "A practical talk on mindfulness as a foundation for living in the present moment.",
+    url: "https://www.youtube.com/watch?v=Ijnt-eXukwk",
+    embedUrl: "https://www.youtube.com/embed/Ijnt-eXukwk"
+  }
+];
+
+export const videoPlaylists: VideoPlaylist[] = [
+  {
+    id: "brooks-on-ramp",
+    title: "Brooks On-Ramp",
+    description: "Start here for the intellectual and moral frame behind the path.",
+    stage: "Stages 1, 2, 5",
+    videos: [
+      "How To Know a Person - David Brooks",
+      "David Brooks writes on the art of seeing others in new book",
+      "The Second Mountain: The Next Big Challenge in Your Life"
+    ]
+  },
+  {
+    id: "presence-practice",
+    title: "Presence Practice",
+    description: "Short practices and talks for building attention before conversation.",
+    stage: "Stage 3",
+    videos: [
+      "Guided Meditation: Living Presence (with Body Scan)",
+      "Mindful Presence & Guided Practice: Being Here",
+      "Mindfulness as a Foundation for Health"
+    ]
+  },
+  {
+    id: "deep-listening-lab",
+    title: "Deep Listening Lab",
+    description: "Teachings to pair with the Illuminator listening exercise.",
+    stage: "Stage 4",
+    videos: [
+      "Deep Listening - Thich Nhat Hanh",
+      "The Art of Listening"
+    ]
   }
 ];
