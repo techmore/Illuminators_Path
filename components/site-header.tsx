@@ -26,9 +26,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b bg-background/90 backdrop-blur">
       <nav className="container flex min-h-16 items-center justify-between" aria-label="Primary navigation">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-glow">
-            ✦
-          </span>
+          <span className="h-2 w-2 rounded-full bg-[#5a8a5e] shadow-[0_0_0_4px_rgba(90,138,94,0.22)]" aria-hidden="true" />
           <span className="font-serif text-xl font-semibold">Illuminators&apos; Path</span>
         </Link>
         <div className="hidden items-center gap-1 lg:flex">
