@@ -17,6 +17,9 @@ export function SiteFooter() {
             <Link href="/practices" className="hover:text-foreground">Practices</Link>
             <Link href="/community" className="hover:text-foreground">Community</Link>
           </div>
+          <p className="mt-5 text-sm text-foreground/80">
+            <a href="https://techmore.github.io/" className="underline underline-offset-4 hover:text-foreground">Part of Techmore</a>
+          </p>
         </div>
         <NewsletterForm />
       </div>

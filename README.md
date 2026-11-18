@@ -2,6 +2,8 @@
 
 From Intellectuals to Active Listening and Presence - Inspired by David Brooks.
 
+**Live site:** https://techmore.github.io/Illuminators_Path/
+
 ## Folder structure
 
 ```txt
@@ -56,3 +58,5 @@ npm run start
 2. Import the repository in Vercel.
 3. Keep the default Next.js settings.
 4. Deploy.
+
+Part of [Techmore](https://techmore.github.io/pages/repos/).
